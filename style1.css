@@ -1,0 +1,20 @@
+html,body , *
+{
+	font-family: tahoma;
+}
+
+div,p , #ID , .cls
+{
+	font-size: 10px;
+}
+
+li span
+{
+	font-size: 25px;
+}
+
+#id .cls span
+
+.cls #id 
+
+#id .cls
