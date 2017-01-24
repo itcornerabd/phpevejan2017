@@ -1,16 +1,14 @@
 <?php 
-		
-	$amount =100.20;
+	$amount = 100.54;
 
+	echo "<br>" . ceil($amount);
+	echo "<br>" . floor($amount);
+	echo "<br>" . round($amount);	
 
-	echo "<br>". floor($amount);// lower value 
-	echo "<br>". ceil($amount); //upper value
-	echo "<br>". round($amount);// 0.5> upper otheriwse lower	
+	echo "<br>";
+	
+	date_default_timezone_set("Asia/Kolkata");	
 
-	date_default_timezone_set("Asia/Kolkata");
-
-	echo "<br>" .date('Y-m-d h:i:s A');  //UTC+0  	
-
-
+	echo date('Y-m-d h:i:s A ');	
 
  ?>
