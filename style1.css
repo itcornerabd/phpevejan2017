@@ -1,4 +1,4 @@
-html,body , *
+/*html,body , *
 {
 	font-family: tahoma;
 }
@@ -18,3 +18,67 @@ li span
 .cls #id 
 
 #id .cls
+*/
+
+
+body	
+{
+	/*background-color: #CCCCCC;*/
+	/*background-color: rgb(255,255,255);*/
+	/*background: url('./images/desert.jpg');
+	background-repeat: no-repeat; repeat-x repeat-y
+	background-size:100% 100%; 
+	background-attachment: fixed; 
+*/
+}
+
+
+div
+{
+	background-color: yellow;
+	height: 100px;
+	width: 200px;
+	border : 1px solid black;
+
+	/*border-top: 1px black dashed ;
+	border-bottom: 2px blue dotted;
+	*/
+	/*border-width-top: 5px;
+	border-color: black;
+	border-style: solid */
+	padding: 10px;
+	/*padding: 10px 5px 15px 20px;*/
+
+	margin: 10px;
+	float: left;
+	overflow: auto; /*scroll hidden */ 
+}
+
+
+#div3
+{
+	width: 50px;
+	height: 50px;
+	position: fixed; /*absolute*/
+	bottom :20px;
+	right:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

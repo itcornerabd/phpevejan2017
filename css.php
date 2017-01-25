@@ -17,21 +17,16 @@
 </head>
 <body>
 
-<ul>
-	<li> <span> item 1 </span></li>
-	<li> <span> item 2 </span> </li>
-</ul>
+<div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi justo sem, scelerisque vel tortor vehicula, aliquam facilisis eros. Sed non.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi justo sem, scelerisque vel tortor vehicula, aliquam facilisis eros. Sed non.
 
+ </div>
+<div> div 2 </div>
+<div id="div3" >div 3</div> 
 
-<span> span 1</span>
-<span>span 2</span> 
-<div id="div1"> div 1 </div>
-<div class="cls"> div 2</div> 
-
-<p class="cls"> p 1 </p>
-<p style="background-color: red" > p2 </p>
-in line css
-
-
+<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
+<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
+<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
+<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
 </body>
 </html>
