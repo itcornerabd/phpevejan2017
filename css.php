@@ -24,9 +24,8 @@
 <div> div 2 </div>
 <div id="div3" >div 3</div> 
 
-<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
-<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
-<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
-<p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p><p>ad</p>
+<a href="index.html"> link </a>
+
+
 </body>
 </html>

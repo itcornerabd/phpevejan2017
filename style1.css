@@ -30,6 +30,8 @@ body
 	background-size:100% 100%; 
 	background-attachment: fixed; 
 */
+
+ /*font-size: 10px;	*/
 }
 
 
@@ -52,25 +54,53 @@ div
 	margin: 10px;
 	float: left;
 	overflow: auto; /*scroll hidden */ 
+
+	/*font-size: 1.5em;*/ /*inch cm em  px*/
+	color: blue;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	font-family: Verdana;
+
+
+}
+
+a
+{
+	background-color: yellow; 
+}
+a:visited
+{
+	background-color: green;
+}
+a:hover
+{
+	background-color: red;
+	color: white;
+}
+a:active
+{
+	background-color: blue;
 }
 
 
 #div3
 {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 70px;
 	position: fixed; /*absolute*/
 	bottom :20px;
 	right:10px;
+	/*transform: rotate(55deg);*/
+	/*transform: skew(10deg,40deg);*/
+	transition: transform 3s,background-color 5s ;
 }
 
-
-
-
-
-
-
-
+#div3:hover
+{
+	background-color: red;
+	transform: rotate(180deg);
+}
 
 
 
