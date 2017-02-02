@@ -4,11 +4,17 @@
 	<title>
 		Action Page
 	</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <body>
 
 <?php 
 	
+
+
+	$name  =input('name');
+	$address=input('address');
+
 	 //var_dump($_GET);	
 
 	if(isset($_GET['id']))
@@ -21,8 +27,10 @@
 	//var_dump($_POST);
 
 	if(isset($_POST['name']))
-		echo "<br> name is  ".$_POST['name'];
-
+		{		
+			$name = $_POST['name'];
+			echo "<br> name is  ".$_POST['name'];
+		}
 	if(isset($_POST['password']))
 		echo "<br> password is ".$_POST['password'];
 
@@ -61,6 +69,18 @@
 
 
  ?>
+ 	<table width="500px" align="center">
+ 		<tr>
+ 			<td>Name</td>
+ 			<td><?=$name?></td>
+ 		</tr>
+ 		<tr>
+ 			<td>address</td>
+ 			<td><?=$address?></td>
+ 		</tr>
+ 	</table>
+
+
 
 </body>
 </html>
