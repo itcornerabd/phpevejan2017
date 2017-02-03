@@ -50,14 +50,26 @@
 					<textarea name="address" rows="3" cols="25"  ><?=input('address')?></textarea>
 				 </td>
 			</tr>
+
+			<?php  $cities = [
+								['id'=>1 , 'name'=>'A.Bad'],['id'=>2 , 'name'=>'Pune'],['id'=>3 , 'name'=>'Mumbai']
+								] ;
+
+					$selectedcity = input('city');			
+								 ?>
 			<tr>
 				<td>City</td>
 				<td>
 					<select name="city" >
 						<option value="">--Select City--</option>
-						<option value="1" <?php if (input('city')==1) {echo "selected";}  ?>>A.bad </option>
-						<option value="2" <?php if (input('city')==2) {echo "selected";}  ?> >Pune</option>
-						<option value="3" <?php if (input('city')==3) {echo "selected";}  ?>  >Mumbai</option> 	
+							<?php foreach ($cities as $city): ?>
+
+							<option value="<?=$city['id']?>"
+								 <?php if($city['id']==$selectedcity) {echo "selected";} ?>    >
+								 	<?=$city['name']?>
+						 	</option>
+
+							<?php endforeach ?>
 					</select>	
 				</td>
 			</tr>
