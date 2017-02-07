@@ -1,15 +1,34 @@
 <?php 
+$uploadfolder = "./upload/";
+
+
 if(isset($_FILES['image']))
 {
-	echo "<pre>";
-	var_dump($_FILES);
-	echo "</pre>";
+	
+	$filename = $_FILES['image']['name'];
+	 $tmp_name =   $_FILES['image']['tmp_name'];
+	 $path =$uploadfolder.$filename;  // upload/desert.jpg
 
-	echo $_FILES['image']['tmp_name'];
-	echo $_FILES['image']['name'];
+	 $i=0;
+	while(file_exists($path ))
+	{	
+		$i++;
+		//echo "file exists";
+		$pathinfo = pathinfo($filename);
 
-	move_uploaded_file($_FILES['image']['tmp_name'], "./upload/".$_FILES['image']['name']);
 
+		$newfilename = $pathinfo['filename']  . "$i." . $pathinfo['extension'];
+
+		$path = $uploadfolder.$newfilename;
+		//die($path);
+
+
+
+	}
+	
+		move_uploaded_file($tmp_name,$path );
+		echo "file uploaded";
+	
 }
 ?>
 

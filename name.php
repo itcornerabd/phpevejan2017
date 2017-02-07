@@ -2,11 +2,12 @@
 
 	$filename = "desert.jpg";
 
-	$str = 1;
+	$pathinfo= pathinfo($filename);	
 
-	echo $filename.$str;	
+	echo "<pre>";
+	var_dump($pathinfo);
+	echo "<pre>";
 
-
-
+	echo $pathinfo['filename'] . "1." . $pathinfo['extension'] ;
 
  ?>
