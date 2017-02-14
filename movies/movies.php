@@ -18,9 +18,10 @@
 			<td>Cast</td>
 			<td>Category</td>
 			<td> Details</td>
+			<td>Delete</td>
 		</tr>
 	<?php 
-		$query = "Select m.*, c.name as category_name From   movies as m , categories as c Where m.category_id = c.id";
+		$query = "Select m.*, c.name as category_name From   movies as m , categories as c Where m.category_id = c.id  ";
 
 		$rows = mysqli_query($con,$query);
 
@@ -36,6 +37,13 @@
 			<td><?=$rs['category_name']?></td>
 			<td>
 				<a href="detail.php?id=<?=$rs['id']?>">	Details</a>
+			</td>
+			<td>
+				<?php if($rs['active']): ?>
+				<a href="delete.php?id=<?=$rs['id']?>&ACTION=DELETE">	Delete</a>
+				<?php else: ?>
+				<a href="delete.php?id=<?=$rs['id']?>&ACTION=REVERT">	Revert</a>	
+				<?php endif ?>	
 			</td>
 		</tr>
 	<?php endwhile ?>	
