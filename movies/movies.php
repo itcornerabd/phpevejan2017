@@ -9,6 +9,9 @@
 <body>
 
 
+
+<a href="addmovie.php">Add New</a>	
+
 <center>
 	<table width="600px">
 		<tr>
