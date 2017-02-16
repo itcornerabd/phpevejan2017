@@ -1,4 +1,18 @@
 <?php require ('./include/constr.php'); ?>
+<?php 
+
+	$query = "Select m.*, c.name as category_name From   movies as m , categories as c Where m.category_id = c.id  ";
+
+		$rows = mysqli_query($con,$query);
+
+	$movies = mysqli_fetch_all($rows, MYSQL_ASSOC);
+
+
+
+
+
+ ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -7,9 +21,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/table.css">
 </head>
 <body>
-
-
-
+<ul>
+<?php foreach ($movies as $key => $movie) : ?>
+	<li><?=$movie['name'];?></li>
+<?php endforeach ?>
+</ul>
 <a href="addmovie.php">Add New</a>	
 
 <center>
@@ -22,34 +38,33 @@
 			<td>Category</td>
 			<td> Details</td>
 			<td>Delete</td>
+			<td>Edit</td>
 		</tr>
 	<?php 
-		$query = "Select m.*, c.name as category_name From   movies as m , categories as c Where m.category_id = c.id  ";
-
-		$rows = mysqli_query($con,$query);
-
-		while($rs=mysqli_fetch_array($rows)):
-
+		foreach ($movies as $key => $movie) :
 	 ?>	
 
 		<tr>
-			<td><?=$rs['id']?></td>
-			<td><?=$rs['name']?></td>
-			<td><?=$rs['release_date']?></td>
-			<td><?=$rs['cast']?></td>
-			<td><?=$rs['category_name']?></td>
+			<td><?=$movie['id']?></td>
+			<td><?=$movie['name']?></td>
+			<td><?=$movie['release_date']?></td>
+			<td><?=$movie['cast']?></td>
+			<td><?=$movie['category_name']?></td>
 			<td>
-				<a href="detail.php?id=<?=$rs['id']?>">	Details</a>
+				<a href="detail.php?id=<?=$movie['id']?>">	Details</a>
 			</td>
 			<td>
-				<?php if($rs['active']): ?>
-				<a href="delete.php?id=<?=$rs['id']?>&ACTION=DELETE">	Delete</a>
+				<?php if($movie['active']): ?>
+				<a href="delete.php?id=<?=$movie['id']?>&ACTION=DELETE">	Delete</a>
 				<?php else: ?>
-				<a href="delete.php?id=<?=$rs['id']?>&ACTION=REVERT">	Revert</a>	
+				<a href="delete.php?id=<?=$movie['id']?>&ACTION=REVERT">	Revert</a>	
 				<?php endif ?>	
 			</td>
+			<td>
+				<a href="editmovie.php?id=<?=$movie['id']?>">	Edit</a>
+			</td>
 		</tr>
-	<?php endwhile ?>	
+	<?php endforeach ?>	
 	</table>	
 
 </center>
