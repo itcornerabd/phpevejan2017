@@ -1,4 +1,11 @@
-<?php require ('./include/constr.php'); ?>
+<?php
+session_start();
+
+if(!isset($_SESSION['username']))
+	header("location:login.php");
+
+
+ require ('./include/constr.php'); ?>
 <?php 
 
 	$query = "Select m.*, c.name as category_name From   movies as m , categories as c Where m.category_id = c.id  ";
@@ -21,11 +28,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/table.css">
 </head>
 <body>
-<ul>
-<?php foreach ($movies as $key => $movie) : ?>
-	<li><?=$movie['name'];?></li>
-<?php endforeach ?>
-</ul>
+
+Welcome <?=$_SESSION['username'];?>
+<a href="logout.php">Logout</a>
+
 <a href="addmovie.php">Add New</a>	
 
 <center>
