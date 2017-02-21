@@ -5,10 +5,11 @@ $submit = input('submit');
 $username = input('username');
 $password=input('password');
 
+
 if($submit=="Login")
 {
 	$query = "select * from users where username ='$username' and password ='$password' ";
-
+	//echo $query;
 	$rows = mysqli_query($con,$query);
 	if(!$rows)
 		die("error in select");
@@ -51,7 +52,7 @@ if($submit=="Login")
 		<tr>
 			<td>Password</td>
 			<td>
-				<input type="password" name="password">
+				<input type="text" name="password">
 			</td>
 		</tr>
 		<tr>
