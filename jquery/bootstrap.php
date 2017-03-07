@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jquery Demo</title>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">		
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <style type="text/css">
-	.yellow
+	.row div 
 	{
 		background-color: yellow;
-
 	}
-	.red
-	{
-		background-color: red;
-		color: white;
-	}
-	.blue
-	{
-		background-color: blue;
-	}		
-
-
+	
 
 </style>
-<link rel="stylesheet" type="text/css" href="../table.css">
 
 </head>
-<body onload="foo()">
+<body>
 
-<div>div 1</div>
-<div class="cls"> div2 </div>
+<h1>Hello world <small> sub heding</small> </h1>
 
-<span> span 1</span>
-<span>span 2</span> 	
+<kbd>ctrl+p</kbd>
 
-<p class="cls"> asd</p>
-<p id="p2">asdas</p>
+<code>
+	$x=$y+$z;	
+</code>
 
-<table width="600px">
-		<tr>
+<button class="btn btn-info"> button </button>
+<a href="#" class="btn btn-warning"> <span class="glyphicon glyphicon-search"></span> link</a>
+
+<table class="table table-bordered table-striped">
+		<tr class="success">
 			<td>id</td>
 			<td>name</td>
 			<td>Release Date</td>
@@ -164,72 +164,34 @@
 		
 	</table>	
 
-	<hr>
-<button id="btnred" class="btn" data-class="red"  >Apply Red Class</button>	
-<button id="btnyellow"  class="btn" data-class="yellow">yellow</button>
-<button id="btnblue"  class="btn" data-class="blue">Blue</button>
+
+<div class="container">
+
+	<div class="row">
+		<?php for($i=1;$i<=10;$i++): ?>		
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"> div <?=$i ?> </div>
+		<?php endfor ?>	
+	</div>
+
+		<div class="row">
+		<?php for($i=1;$i<=10;$i++): ?>		
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"> div <?=$i ?> </div>
+		<?php endfor ?>	
+	</div>
+
+		
+</div>
+
+
+
 
 </body>
 </html>
 
+
+
 <script type="text/javascript" src="jquery.js" ></script>
 
-<script type="text/javascript">	
-//$(document).ready(function() {
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-	// $("div").addClass('blue');
-	// $("span").addClass('yellow');
-
-	// $(".cls").addClass('yellow');
-
-	// $("#p2").addClass('red');
-
-	 // $("tr:eq(5)").addClass('yellow');
-
-	 //$("tr:contains(Comedy)").addClass('yellow');
-
-	 // $("tr:odd").addClass('yellow');
-	 // $("tr:even").addClass('red');
-	 // // index start 0 irresoctive of parent 
-
-	 // $("tr:nth-child(odd)").addClass('yellow');
-	 // $("tr:nth-child(even)").addClass('red');	
-
-	 //strats from 1 respective to parent
-
-
-
-//})
-// $("#btnred").click(function() {
-
-// 	$("table").removeClass()
-// 	$("table").addClass('red');
-
-// })
-
-// $("#btnyellow").click(function() {
-// 	$("table").removeClass()
-// 	$("table").addClass('yellow');
-// })
-
-
-$("tr").mouseover(function() {
-	$(this).addClass('yellow');
-})
-
-$("tr").mouseout(function() {
-	$(this).removeClass('yellow');
-})
-
-$(".btn").click(function() {
-
-	var clsname = $(this).attr('data-class')   // $(this).html();
-	$("table").removeClass()
-	$("table").addClass(clsname);
-
-})
-
-
-
-</script>
