@@ -20,7 +20,9 @@
 					<li>
 						<a href="#" id="linkc">C</a>
 					</li>
-					<li>D</li>
+					<li>
+						<a href="#" id="linkd">D</a>	
+					</li>
 				</ul>
 			</td>
 			<td>
@@ -70,6 +72,23 @@
 
 	})
 
+	$("#linkd").click(function() {
+
+		$.getJSON('d.php',function(response) {
+
+			//console.log(response);
+			var html = '<ol>';
+			$.each(response , function(index, value) {
+				//console.log(value.word);
+				html+= '<li> '+ value.word +' </li>'
+			} )
+			html+='</ol>';
+			console.log(html);
+			$("#words").html(html);
+		} )
+
+
+	})
 
 </script>
 
