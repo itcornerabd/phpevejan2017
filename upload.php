@@ -1,7 +1,6 @@
 <?php 
 $uploadfolder = "./upload/";
 
-
 if(isset($_FILES['image']))
 {
 	
@@ -16,13 +15,10 @@ if(isset($_FILES['image']))
 		//echo "file exists";
 		$pathinfo = pathinfo($filename);
 
-
 		$newfilename = $pathinfo['filename']  . "$i." . $pathinfo['extension'];
 
 		$path = $uploadfolder.$newfilename;
 		//die($path);
-
-
 
 	}
 	
